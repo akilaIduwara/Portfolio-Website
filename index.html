@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akila Induwara - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Particles.js Background -->
+  <div id="particles-js"></div>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="container">
+      <div class="logo">Akila Induwara Kaluarachchi</div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h3 class="animate-fade">HELLO!</h3>
+          <h1 class="animate-slide-in">I Am <span class="highlight">Akila Induwara</span></h1>
+          <div class="profession animate-slide-in">I'm a <span id="typing-text">Computer Science Undergraduate</span><span class="cursor"></span></div>
+          <p class="animate-slide-in">Machine Learning & Software Development Enthusiast.</p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn animate-slide-in">View My Work</a>
+            <a href="assets/cv/akila_cv.pdf" class="btn btn-outline animate-slide-in" download>Download CV</a>
+          </div>
+        </div>
+        <div class="profile-container animate-fade">
+          <canvas id="particle-canvas"></canvas>
+          <div class="profile-frame">
+            <img src="Akila2.jpg" alt="Akila Induwara" id="profile-img" class="profile-image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title animate-slide-in">About Me</h2>
+      <div class="about-content">
+        <p class="animate-slide-in">
+          I am a dedicated Computer Science student at the University of Westminster, with a strong foundation in programming, machine learning, and software development.<br> I have hands-on experience in building AI-powered systems, web applications, and data-driven solutions.
+        </p>
+        <div class="about-details">
+          <div class="about-card animate-slide-in">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Education</h3>
+            <p>BSc in Computer Science at the University of Westminster.</p>
+          </div>
+          <div class="about-card animate-slide-in">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Experience</h3>
+            <p>2+ years of hands-on experience in software development and machine learning.</p>
+          </div>
+          <div class="about-card animate-slide-in">
+            <i class="fas fa-rocket"></i>
+            <h3>Passion</h3>
+            <p>Building innovative solutions to solve real-world problems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title animate-slide-in">My Projects</h2>
+      <div class="project-grid">
+        <!-- LumiStone Project -->
+        <div class="project-card animate-slide-in" onclick="showProjectDetails('LumiStone')">
+          <div class="project-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3>LumiStone - AI-Powered Resource Detection</h3>
+          <div class="project-overlay">
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Machine Learning</span>
+              <span>LightGBM</span>
+            </div>
+            <div class="view-project">View Details</div>
+          </div>
+        </div>
+
+        <!-- Hand Signal Detection -->
+        <div class="project-card animate-slide-in" onclick="showProjectDetails('HandSignal')">
+          <div class="project-icon">
+            <i class="fas fa-hand-paper"></i>
+          </div>
+          <h3>Hand Signal Detection Using SSD</h3>
+          <div class="project-overlay">
+            <div class="project-tech">
+              <span>Computer Vision</span>
+              <span>Ubuntu</span>
+              <span>SSD Model</span>
+            </div>
+            <div class="view-project">View Details</div>
+          </div>
+        </div>
+
+        <!-- Ticket Booking System -->
+        <div class="project-card animate-slide-in" onclick="showProjectDetails('TicketBooking')">
+          <div class="project-icon">
+            <i class="fas fa-ticket-alt"></i>
+          </div>
+          <h3>Ticket Booking System with Spring Boot and React</h3>
+          <div class="project-overlay">
+            <div class="project-tech">
+              <span>Spring Boot</span>
+              <span>React</span>
+              <span>Multithreading</span>
+            </div>
+            <div class="view-project">View Details</div>
+          </div>
+        </div>
+
+        <!-- Breast Cancer Prediction -->
+        <div class="project-card animate-slide-in" onclick="showProjectDetails('BreastCancer')">
+          <div class="project-icon">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <h3>Breast Cancer Mortality & Survival Prediction</h3>
+          <div class="project-overlay">
+            <div class="project-tech">
+              <span>Machine Learning</span>
+              <span>KNN</span>
+              <span>Decision Trees</span>
+            </div>
+            <div class="view-project">View Details</div>
+          </div>
+        </div>
+
+        <!-- Bookstore Management System -->
+        <div class="project-card animate-slide-in" onclick="showProjectDetails('Bookstore')">
+          <div class="project-icon">
+            <i class="fas fa-book"></i>
+          </div>
+          <h3>Bookstore Management System</h3>
+          <div class="project-overlay">
+            <div class="project-tech">
+              <span>JAX-RS</span>
+              <span>JSON</span>
+              <span>RESTful API</span>
+            </div>
+            <div class="view-project">View Details</div>
+          </div>
+        </div>
+
+        <!-- Snake Game (JavaSwing) -->
+        <div class="project-card animate-slide-in" onclick="showProjectDetails('SnakeGame')">
+          <div class="project-icon">
+            <i class="fas fa-gamepad"></i>
+          </div>
+          <h3>Snake Game (JavaSwing)</h3>
+          <div class="project-overlay">
+            <div class="project-tech">
+              <span>Java</span>
+              <span>Java Swing</span>
+              <span>Game Development</span>
+            </div>
+            <div class="view-project">View Details</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Details Popup -->
+  <div id="project-popup" class="project-popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closeProjectDetails()">&times;</span>
+      <h2 id="project-title"></h2>
+      <p id="project-description"></p>
+      <div class="project-tech-stack" id="project-tech-stack"></div>
+      <a id="project-github" href="#" class="btn" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="section-title animate-slide-in">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card animate-slide-in" onclick="showSkillDetails('Java')">
+          <i class="fab fa-java"></i>
+          <h3>Java</h3>
+          <div class="skill-progress">
+            <div class="skill-bar" style="width: 90%"></div>
+          </div>
+        </div>
+        <div class="skill-card animate-slide-in" onclick="showSkillDetails('Python')">
+          <i class="fab fa-python"></i>
+          <h3>Python</h3>
+          <div class="skill-progress">
+            <div class="skill-bar" style="width: 85%"></div>
+          </div>
+        </div>
+        <div class="skill-card animate-slide-in" onclick="showSkillDetails('MySQL')">
+          <i class="fas fa-database"></i>
+          <h3>MySQL</h3>
+          <div class="skill-progress">
+            <div class="skill-bar" style="width: 80%"></div>
+          </div>
+        </div>
+        <div class="skill-card animate-slide-in" onclick="showSkillDetails('ReactJS')">
+          <i class="fab fa-react"></i>
+          <h3>ReactJS</h3>
+          <div class="skill-progress">
+            <div class="skill-bar" style="width: 75%"></div>
+          </div>
+        </div>
+        <div class="skill-card animate-slide-in" onclick="showSkillDetails('Machine Learning')">
+          <i class="fas fa-brain"></i>
+          <h3>Machine Learning</h3>
+          <div class="skill-progress">
+            <div class="skill-bar" style="width: 85%"></div>
+          </div>
+        </div>
+        <div class="skill-card animate-slide-in" onclick="showSkillDetails('Spring Boot')">
+          <i class="fas fa-code"></i>
+          <h3>Spring Boot</h3>
+          <div class="skill-progress">
+            <div class="skill-bar" style="width: 80%"></div>
+          </div>
+        </div>
+        <div class="skill-card animate-slide-in" onclick="showSkillDetails('JAX-RS')">
+          <i class="fas fa-code"></i>
+          <h3>JAX-RS</h3>
+          <div class="skill-progress">
+            <div class="skill-bar" style="width: 75%"></div>
+          </div>
+        </div>
+        <div class="skill-card animate-slide-in" onclick="showSkillDetails('Postman')">
+          <i class="fas fa-toolbox"></i>
+          <h3>Postman</h3>
+          <div class="skill-progress">
+            <div class="skill-bar" style="width: 70%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skill Details Popup -->
+  <div id="skill-popup" class="project-popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closeSkillDetails()">&times;</span>
+      <h2 id="skill-title"></h2>
+      <p id="skill-description"></p>
+    </div>
+  </div>
+
+  <!-- Contact Me Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title animate-slide-in">Contact Me</h2>
+      <div class="contact-content">
+        <div class="contact-info animate-slide-in">
+          <div class="contact-card">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h3>Phone</h3>
+              <p>+94 71 2025476</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email</h3>
+              <p>k.a.akilainduwara@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h3>Location</h3>
+              <p>Colombo, Sri Lanka</p>
+            </div>
+          </div>
+        </div>
+        <form action="#" method="post" class="animate-slide-in">
+          <h3>Send Me a Message</h3>
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+      <div class="social-links animate-slide-in">
+        <a href="https://www.linkedin.com/in/akila-induwara" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/akilaiduwara" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:k.a.akilainduwara@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Akila Induwara. All Rights Reserved.</p>
+      <a href="#home" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <!-- Particles.js for animated background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
