@@ -289,7 +289,7 @@ nav .nav-links li a.active::after {
   width: 350px;
   height: 350px;
   top: 65%;
-  left: 40%;
+  left: 60%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   overflow: hidden;
