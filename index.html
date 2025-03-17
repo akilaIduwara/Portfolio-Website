@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Akila Induwara - Portfolio</title>
+  <title>Akila Induwara | Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
   <!-- Particles.js Background -->
   <div id="particles-js"></div>
-
+  
   <!-- Navigation Bar -->
   <nav>
     <div class="container">
@@ -19,8 +20,9 @@
       <ul class="nav-links">
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="hamburger">
@@ -30,7 +32,7 @@
       </div>
     </div>
   </nav>
-
+  
   <!-- Home Section -->
   <section id="home" class="hero">
     <div class="container">
@@ -39,10 +41,11 @@
           <h3 class="animate-fade">HELLO!</h3>
           <h1 class="animate-slide-in">I Am <span class="highlight">Akila Induwara</span></h1>
           <div class="profession animate-slide-in">I'm a <span id="typing-text">Computer Science Undergraduate</span><span class="cursor"></span></div>
-          <p class="animate-slide-in">Machine Learning & Software Development Enthusiast.</p>
+          <p class="animate-slide-in">BSc (Hons) Computer Science undergraduate at the Informatics Institute of Technology (IIT),
+             affiliated with the University of Westminster..</p>
           <div class="hero-buttons">
             <a href="#projects" class="btn animate-slide-in">View My Work</a>
-            <a href="assets/cv/akila_cv.pdf" class="btn btn-outline animate-slide-in" download>Download CV</a>
+            <a href="assets/cv/Akila Induwara.pdf" class="btn btn-outline animate-slide-in" download>Download CV</a>
           </div>
         </div>
         <div class="profile-container animate-fade">
@@ -61,8 +64,7 @@
       <h2 class="section-title animate-slide-in">About Me</h2>
       <div class="about-content">
         <p class="animate-slide-in">
-          I am a dedicated Computer Science student at the University of Westminster, with a strong foundation in programming, machine learning, and software development.<br> I have hands-on experience in building AI-powered systems, web applications, and data-driven solutions.
-        </p>
+            </p>
         <div class="about-details">
           <div class="about-card animate-slide-in">
             <i class="fas fa-graduation-cap"></i>
@@ -84,213 +86,167 @@
     </div>
   </section>
 
+
+  <div class="skills-container">
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+      <span>Java</span>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+      <span>Python</span>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+      <span>MySQL</span>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+      <span>React</span>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="Machine Learning">
+      <span>Machine Learning</span>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot">
+      <span>Spring Boot</span>
+    </div>
+    <div class="skill-card">
+      <img src="https://www.vectorlogo.zone/logos/apache_tomcat/apache_tomcat-icon.svg" alt="JAX-RS">
+      <span>JAX-RS</span>
+    </div>
+    <div class="skill-card">
+      <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman">
+      <span>Postman</span>
+    </div>
+  </div>
+  
+  
   <!-- Projects Section -->
   <section id="projects" class="projects">
     <div class="container">
-      <h2 class="section-title animate-slide-in">My Projects</h2>
+      <h2 class="section-title">My Projects</h2>
       <div class="project-grid">
-        <!-- LumiStone Project -->
-        <div class="project-card animate-slide-in" onclick="showProjectDetails('LumiStone')">
+        <div class="project-card" onclick="showProjectDetails('LumiStone')">
           <div class="project-icon">
             <i class="fas fa-lightbulb"></i>
           </div>
-          <h3>LumiStone - AI-Powered Resource Detection</h3>
-          <div class="project-overlay">
-            <div class="project-tech">
-              <span>Python</span>
-              <span>Machine Learning</span>
-              <span>LightGBM</span>
-            </div>
-            <div class="view-project">View Details</div>
-          </div>
+          <h3>LumiStone: AI-Powered Resource Detection</h3>
+          <span class="status completed">Completed</span>
         </div>
-
-        <!-- Hand Signal Detection -->
-        <div class="project-card animate-slide-in" onclick="showProjectDetails('HandSignal')">
+        <div class="project-card" onclick="showProjectDetails('HandSignal')">
           <div class="project-icon">
             <i class="fas fa-hand-paper"></i>
           </div>
           <h3>Hand Signal Detection Using SSD</h3>
-          <div class="project-overlay">
-            <div class="project-tech">
-              <span>Computer Vision</span>
-              <span>Ubuntu</span>
-              <span>SSD Model</span>
-            </div>
-            <div class="view-project">View Details</div>
-          </div>
+          <span class="status completed">Completed</span>
         </div>
-
-        <!-- Ticket Booking System -->
-        <div class="project-card animate-slide-in" onclick="showProjectDetails('TicketBooking')">
+        <div class="project-card" onclick="showProjectDetails('TicketBooking')">
           <div class="project-icon">
             <i class="fas fa-ticket-alt"></i>
           </div>
           <h3>Ticket Booking System with Spring Boot and React</h3>
-          <div class="project-overlay">
-            <div class="project-tech">
-              <span>Spring Boot</span>
-              <span>React</span>
-              <span>Multithreading</span>
-            </div>
-            <div class="view-project">View Details</div>
-          </div>
+          <span class="status completed">Completed</span>
         </div>
-
-        <!-- Breast Cancer Prediction -->
-        <div class="project-card animate-slide-in" onclick="showProjectDetails('BreastCancer')">
+        <div class="project-card" onclick="showProjectDetails('BreastCancer')">
           <div class="project-icon">
             <i class="fas fa-heartbeat"></i>
           </div>
-          <h3>Breast Cancer Mortality & Survival Prediction</h3>
-          <div class="project-overlay">
-            <div class="project-tech">
-              <span>Machine Learning</span>
-              <span>KNN</span>
-              <span>Decision Trees</span>
-            </div>
-            <div class="view-project">View Details</div>
-          </div>
+          <h3>Breast Cancer Mortality & Survival Prediction (Ongoing)</h3>
+          <span class="status ongoing">Ongoing</span>
         </div>
-
-        <!-- Bookstore Management System -->
-        <div class="project-card animate-slide-in" onclick="showProjectDetails('Bookstore')">
+        <div class="project-card" onclick="showProjectDetails('Bookstore')">
           <div class="project-icon">
             <i class="fas fa-book"></i>
           </div>
           <h3>Bookstore Management System</h3>
-          <div class="project-overlay">
-            <div class="project-tech">
-              <span>JAX-RS</span>
-              <span>JSON</span>
-              <span>RESTful API</span>
-            </div>
-            <div class="view-project">View Details</div>
-          </div>
+          <span class="status completed">Completed</span>
         </div>
-
-        <!-- Snake Game (JavaSwing) -->
-        <div class="project-card animate-slide-in" onclick="showProjectDetails('SnakeGame')">
+        <div class="project-card" onclick="showProjectDetails('ClientServer')">
+          <div class="project-icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <h3>Client-Server Architectures Coursework</h3>
+          <span class="status completed">Completed</span>
+        </div>
+        <div class="project-card" onclick="showProjectDetails('SnakeGame')">
           <div class="project-icon">
             <i class="fas fa-gamepad"></i>
           </div>
           <h3>Snake Game (JavaSwing)</h3>
-          <div class="project-overlay">
-            <div class="project-tech">
-              <span>Java</span>
-              <span>Java Swing</span>
-              <span>Game Development</span>
-            </div>
-            <div class="view-project">View Details</div>
+          <span class="status completed">Completed</span>
+        </div>
+        <div class="project-card" onclick="showProjectDetails('Calculator')">
+          <div class="project-icon">
+            <i class="fas fa-calculator"></i>
           </div>
+          <h3>Calculator Applications with Error Handling</h3>
+          <span class="status completed">Completed</span>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Project Details Popup -->
-  <div id="project-popup" class="project-popup">
-    <div class="popup-content">
-      <span class="close-btn" onclick="closeProjectDetails()">&times;</span>
-      <h2 id="project-title"></h2>
-      <p id="project-description"></p>
-      <div class="project-tech-stack" id="project-tech-stack"></div>
-      <a id="project-github" href="#" class="btn" target="_blank">View on GitHub</a>
-    </div>
-  </div>
-
-  <!-- Skills Section -->
-  <section id="skills" class="skills">
+  <!-- Certifications Section -->
+  <section id="certifications" class="skills">
     <div class="container">
-      <h2 class="section-title animate-slide-in">Technical Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card animate-slide-in" onclick="showSkillDetails('Java')">
-          <i class="fab fa-java"></i>
-          <h3>Java</h3>
-          <div class="skill-progress">
-            <div class="skill-bar" style="width: 90%"></div>
-          </div>
+      <h2 class="section-title">Certifications</h2>
+      <div class="about-details">
+        <div class="about-card">
+          <i class="fab fa-linkedin"></i>
+          <h3>LinkedIn Certifications</h3>
+          <ul>
+            <li><a class="certificate-link" href="https://www.linkedin.com/learning/certificates/78eb7c4d0d099d460a2794a03202689b4cf950c40e4365aecf2e2b456f1e3dbc?u=76664938" target="_blank">Learning C++</a></li>
+            <li><a class="certificate-link" href="https://www.linkedin.com/learning/certificates/be1b7e605e60bce7fc67b6b878d47d05dbe5940ec2caf2dc52cee8aa687d3f71?u=76664938" target="_blank">Level Up: C++</a></li>
+            <li><a class="certificate-link" href="https://www.linkedin.com/learning/certificates/c3ceec784523b8be0155e9904a65f6df01f682193eee30c48db6e12a6c3ff81c?u=76664938" target="_blank">Object-Oriented Programming with C++</a></li>
+            <li><a class="certificate-link" href="https://www.linkedin.com/learning/certificates/75e8ac853198ae47a539d4214c856dd8bc8d673509bd2319c0c17e21da01c17c?u=76664938" target="_blank">C++ Development: Advanced Concepts, Lambda Expressions, and Best Practices</a></li>
+            <li><a class="certificate-link" href="https://www.linkedin.com/learning/certificates/8f3f5f5cae55c1632c305acfa308319f313941095b04e523f12aacecdfecc1af?u=76664938" target="_blank">AWS Certified Cloud Practitioner (CLF-C02) Cert Prep: 1 Cloud Concepts</a></li>
+            <li><a class="certificate-link" href="https://www.linkedin.com/learning/certificates/403bb7053ddf49330dbafcc9b2286bb3f2f01182dde01b3b48523477c1be352f?u=76664938" target="_blank">AWS Essential Training for Developers</a></li>
+            <li><a class="certificate-link" href="https://www.linkedin.com/learning/certificates/cf9412a1c980a8d17b3741a67fc76d0d7a5d547715d824ef3e3156a3ca5eb62b?u=76664938" target="_blank">Artificial Intelligence Foundations: Machine Learning</a></li>
+            <li><a class="certificate-link" href="https://www.linkedin.com/learning/certificates/e9389c0d949d382dda066e8badd6a717d234b673d1fe9e14c6fec8f87d791e59?u=76664938" target="_blank">Python Development Professional Certification</a></li>
+            <li><a class="certificate-link" href="https://www.linkedin.com/learning/certificates/a27f14e2f3a47bc1173b457b8bbca8789d867d9d2536c5918ae4d01c98e913d0?u=76664938" target="_blank">Learning REST APIs</a></li>
+            <li><a class="certificate-link" href="https://www.linkedin.com/learning/certificates/75e8ac853198ae47a539d4214c856dd8bc8d673509bd2319c0c17e21da01c17c?u=76664938" target="_blank">Spring Boot 2.0 Essential Training</a></li>
+          </ul>
         </div>
-        <div class="skill-card animate-slide-in" onclick="showSkillDetails('Python')">
-          <i class="fab fa-python"></i>
-          <h3>Python</h3>
-          <div class="skill-progress">
-            <div class="skill-bar" style="width: 85%"></div>
-          </div>
+        <div class="about-card">
+          <i class="fab fa-udemy"></i>
+          <h3>Udemy Certifications</h3>
+          <ul>
+            <li><a class="certificate-link" href="https://www.udemy.com/certificate/UC-170be36a-5072-4be4-b5d0-48277d3793f9/" target="_blank">Java Masterclass 2025: 130+ Hours of Expert Lessons</a></li>
+            <li><a class="certificate-link" href="https://www.udemy.com/certificate/UC-32ca3880-1bff-4e40-954a-2a1457af7ffa/" target="_blank">Beginning C++ Programming - From Beginner to Beyond</a></li>
+            <li><a class="certificate-link" href="https://www.udemy.com/certificate/UC-2c452b21-bb48-482a-9224-b8f34052abea/" target="_blank">HTML - The Complete Guide to HTML for Beginners</a></li>
+            <li><a class="certificate-link" href="https://www.udemy.com/certificate/UC-758122e9-95da-490a-a4e0-5045eff5ae01/" target="_blank">SQL Bootcamp with MySQL, PHP & Python</a></li>
+          </ul>
         </div>
-        <div class="skill-card animate-slide-in" onclick="showSkillDetails('MySQL')">
-          <i class="fas fa-database"></i>
-          <h3>MySQL</h3>
-          <div class="skill-progress">
-            <div class="skill-bar" style="width: 80%"></div>
-          </div>
-        </div>
-        <div class="skill-card animate-slide-in" onclick="showSkillDetails('ReactJS')">
-          <i class="fab fa-react"></i>
-          <h3>ReactJS</h3>
-          <div class="skill-progress">
-            <div class="skill-bar" style="width: 75%"></div>
-          </div>
-        </div>
-        <div class="skill-card animate-slide-in" onclick="showSkillDetails('Machine Learning')">
-          <i class="fas fa-brain"></i>
-          <h3>Machine Learning</h3>
-          <div class="skill-progress">
-            <div class="skill-bar" style="width: 85%"></div>
-          </div>
-        </div>
-        <div class="skill-card animate-slide-in" onclick="showSkillDetails('Spring Boot')">
-          <i class="fas fa-code"></i>
-          <h3>Spring Boot</h3>
-          <div class="skill-progress">
-            <div class="skill-bar" style="width: 80%"></div>
-          </div>
-        </div>
-        <div class="skill-card animate-slide-in" onclick="showSkillDetails('JAX-RS')">
-          <i class="fas fa-code"></i>
-          <h3>JAX-RS</h3>
-          <div class="skill-progress">
-            <div class="skill-bar" style="width: 75%"></div>
-          </div>
-        </div>
-        <div class="skill-card animate-slide-in" onclick="showSkillDetails('Postman')">
-          <i class="fas fa-toolbox"></i>
-          <h3>Postman</h3>
-          <div class="skill-progress">
-            <div class="skill-bar" style="width: 70%"></div>
-          </div>
+        <div class="about-card">
+          <i class="fas fa-trophy"></i>
+          <h3>Competitions</h3>
+          <p><strong>Hult Prize 2025 – On-Campus Program</strong></p>
+          <p>Participated in the Hult Prize 2025 On-Campus Program with LumiStone, a project using ML, ANN, and Deep Learning to detect underground water, gold, and gems. Developed an Android app for real-time detection and analysis.</p>
+          <a class="certificate-link" href="https://drive.google.com/file/d/1Ncjq7yi9vP9Kg7OPk6vzYqPV4hPY5C2U/view" target="_blank"><br>e-certificate</a>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Skill Details Popup -->
-  <div id="skill-popup" class="project-popup">
-    <div class="popup-content">
-      <span class="close-btn" onclick="closeSkillDetails()">&times;</span>
-      <h2 id="skill-title"></h2>
-      <p id="skill-description"></p>
-    </div>
-  </div>
-
-  <!-- Contact Me Section -->
+  
+  <!-- Contact Section -->
   <section id="contact" class="contact">
     <div class="container">
-      <h2 class="section-title animate-slide-in">Contact Me</h2>
+      <h2 class="section-title">Get In Touch</h2>
       <div class="contact-content">
-        <div class="contact-info animate-slide-in">
-          <div class="contact-card">
-            <i class="fas fa-phone"></i>
-            <div>
-              <h3>Phone</h3>
-              <p>+94 71 2025476</p>
-            </div>
-          </div>
+        <div class="contact-info">
           <div class="contact-card">
             <i class="fas fa-envelope"></i>
             <div>
               <h3>Email</h3>
               <p>k.a.akilainduwara@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h3>Phone</h3>
+              <p>071 - 2025476</p>
             </div>
           </div>
           <div class="contact-card">
@@ -301,38 +257,63 @@
             </div>
           </div>
         </div>
-        <form action="#" method="post" class="animate-slide-in">
-          <h3>Send Me a Message</h3>
+        <form>
+          <h3>Send Me A Message</h3>
           <div class="form-group">
-            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="text" placeholder="Your Name" required>
           </div>
           <div class="form-group">
-            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="email" placeholder="Your Email" required>
           </div>
           <div class="form-group">
-            <textarea name="message" placeholder="Your Message" required></textarea>
+            <input type="text" placeholder="Subject">
           </div>
-          <button type="submit" class="btn">Send Message</button>
+          <div class="form-group">
+            <textarea placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
         </form>
       </div>
-      <div class="social-links animate-slide-in">
-        <a href="https://www.linkedin.com/in/akila-induwara" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/akilaiduwara" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="mailto:k.a.akilainduwara@gmail.com"><i class="fas fa-envelope"></i></a>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
   </section>
-
+  
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Akila Induwara. All Rights Reserved.</p>
-      <a href="#home" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+      <p>&copy; 2025 Akila Induwara Kaluarachchi. All Rights Reserved.</p>
+      <a href="#home" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+      </a>
     </div>
   </footer>
-
-  <!-- Particles.js for animated background -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  
+  <!-- Project Popup -->
+  <div id="project-popup" class="project-popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closeProjectDetails()"><i class="fas fa-times"></i></span>
+      <h2 id="project-title">Project Title</h2>
+      <p id="project-description">Project Description</p>
+      <div class="project-tech-stack" id="project-tech-stack"></div>
+      <a id="project-github" href="#" class="btn" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+  
+  <!-- Skill Popup -->
+  <div id="skill-popup" class="skill-popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closeSkillDetails()"><i class="fas fa-times"></i></span>
+      <h2 id="skill-title">Skill Title</h2>
+      <p id="skill-description">Skill Description</p>
+    </div>
+  </div>
+  
   <script src="script.js"></script>
 </body>
 </html>
+
