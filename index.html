@@ -8,6 +8,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <!-- Add EmailJS library -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("YOUR_USER_ID"); // Initialize EmailJS with your User ID
+    })();
+  </script>
 </head>
 <body>
   <!-- Particles.js Background -->
@@ -41,8 +48,7 @@
           <h3 class="animate-fade">HELLO!</h3>
           <h1 class="animate-slide-in">I Am <span class="highlight">Akila Induwara</span></h1>
           <div class="profession animate-slide-in">I'm a <span id="typing-text">Computer Science Undergraduate</span><span class="cursor"></span></div>
-          <p class="animate-slide-in">BSc (Hons) Computer Science undergraduate at the Informatics Institute of Technology (IIT),
-             affiliated with the University of Westminster..</p>
+          <p class="animate-slide-in">BSc (Hons) Computer Science undergraduate at the Informatics Institute of Technology (IIT), affiliated with the University of Westminster.</p>
           <div class="hero-buttons">
             <a href="#projects" class="btn animate-slide-in">View My Work</a>
             <a href="assets/cv/Akila Induwara Kaluarachchi.pdf" class="btn btn-outline animate-slide-in" download>Download CV</a>
@@ -63,8 +69,7 @@
     <div class="container">
       <h2 class="section-title animate-slide-in">About Me</h2>
       <div class="about-content">
-        <p class="animate-slide-in">
-            </p>
+        <p class="animate-slide-in"></p>
         <div class="about-details">
           <div class="about-card animate-slide-in">
             <i class="fas fa-graduation-cap"></i>
@@ -86,104 +91,102 @@
     </div>
   </section>
 
+  <!-- Skills Section -->
   <section id="skills" class="skills">
-  <div class="skills-container">
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
-      <span>Java</span>
+    <div class="skills-container">
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+        <span>Java</span>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+        <span>C++</span>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+        <span>Python</span>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+        <span>MySQL</span>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+        <span>React</span>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="Machine Learning">
+        <span>Machine Learning</span>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot">
+        <span>Spring Boot</span>
+      </div>
+      <div class="skill-card">
+        <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman">
+        <span>Postman</span>
+      </div>
     </div>
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
-      <span>C++</span>
-    </div>
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-      <span>Python</span>
-    </div>
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
-      <span>MySQL</span>
-    </div>
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
-      <span>React</span>
-    </div>
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="Machine Learning">
-      <span>Machine Learning</span>
-    </div>
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot">
-      <span>Spring Boot</span>
-    </div>
-  
-    <div class="skill-card">
-      <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman">
-      <span>Postman</span>
-    </div>
-  </div>
-
-
-</section>
-  
+  </section>
   
   <!-- Projects Section -->
-<section id="projects" class="projects">
-  <div class="container">
-    <h2 class="section-title">My Projects</h2>
-    <div class="project-grid">
-      <div class="project-card" onclick="showProjectDetails('LumiStone')">
-        <div class="project-icon">
-          <i class="fas fa-lightbulb"></i>
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">My Projects</h2>
+      <div class="project-grid">
+        <div class="project-card" onclick="showProjectDetails('LumiStone')">
+          <div class="project-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3>LumiStone: AI-Powered Resource Detection</h3>
+          <span class="status completed">Completed</span>
         </div>
-        <h3>LumiStone: AI-Powered Resource Detection</h3>
-        <span class="status completed">Completed</span>
-      </div>
-      <div class="project-card" onclick="showProjectDetails('HandSignal')">
-        <div class="project-icon">
-          <i class="fas fa-hand-paper"></i>
+        <div class="project-card" onclick="showProjectDetails('HandSignal')">
+          <div class="project-icon">
+            <i class="fas fa-hand-paper"></i>
+          </div>
+          <h3>Hand Signal Detection Using SSD</h3>
+          <span class="status completed">Completed</span>
         </div>
-        <h3>Hand Signal Detection Using SSD</h3>
-        <span class="status completed">Completed</span>
-      </div>
-      <div class="project-card" onclick="showProjectDetails('TicketBooking')">
-        <div class="project-icon">
-          <i class="fas fa-ticket-alt"></i>
+        <div class="project-card" onclick="showProjectDetails('TicketBooking')">
+          <div class="project-icon">
+            <i class="fas fa-ticket-alt"></i>
+          </div>
+          <h3>Ticket Booking System with Spring Boot and React</h3>
+          <span class="status completed">Completed</span>
         </div>
-        <h3>Ticket Booking System with Spring Boot and React</h3>
-        <span class="status completed">Completed</span>
-      </div>
-      <div class="project-card" onclick="showProjectDetails('BreastCancer')">
-        <div class="project-icon">
-          <i class="fas fa-heartbeat"></i>
+        <div class="project-card" onclick="showProjectDetails('BreastCancer')">
+          <div class="project-icon">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <h3>Breast Cancer Mortality & Survival Prediction (Ongoing)</h3>
+          <span class="status ongoing">Ongoing</span>
         </div>
-        <h3>Breast Cancer Mortality & Survival Prediction (Ongoing)</h3>
-        <span class="status ongoing">Ongoing</span>
-      </div>
-      <div class="project-card" onclick="showProjectDetails('Bookstore')">
-        <div class="project-icon">
-          <i class="fas fa-book"></i>
+        <div class="project-card" onclick="showProjectDetails('Bookstore')">
+          <div class="project-icon">
+            <i class="fas fa-book"></i>
+          </div>
+          <h3>Bookstore Management System (Ongoing)</h3>
+          <span class="status ongoing">Ongoing</span>
         </div>
-        <h3>Bookstore Management System (Ongoing)</h3>
-        <span class="status ongoing">Ongoing</span>
-      </div>
-      <div class="project-card" onclick="showProjectDetails('SnakeGame')">
-        <div class="project-icon">
-          <i class="fas fa-gamepad"></i>
+        <div class="project-card" onclick="showProjectDetails('SnakeGame')">
+          <div class="project-icon">
+            <i class="fas fa-gamepad"></i>
+          </div>
+          <h3>Snake Game (JavaSwing)</h3>
+          <span class="status completed">Completed</span>
         </div>
-        <h3>Snake Game (JavaSwing)</h3>
-        <span class="status completed">Completed</span>
-      </div>
-      <div class="project-card" onclick="showProjectDetails('Calculator')">
-        <div class="project-icon">
-          <i class="fas fa-calculator"></i>
+        <div class="project-card" onclick="showProjectDetails('Calculator')">
+          <div class="project-icon">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <h3>Calculator Applications with Error Handling</h3>
+          <span class="status completed">Completed</span>
         </div>
-        <h3>Calculator Applications with Error Handling</h3>
-        <span class="status completed">Completed</span>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
   <!-- Certifications Section -->
   <section id="certifications" class="skills">
     <div class="container">
@@ -312,4 +315,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-

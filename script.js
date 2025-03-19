@@ -253,3 +253,28 @@ function typeText() {
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(typeText, 1000);
 });
+
+// Add this code to handle form submission
+document.querySelector('form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Get form data
+  const name = document.querySelector('input[type="text"]').value;
+  const email = document.querySelector('input[type="email"]').value;
+  const subject = document.querySelector('input[type="text"][placeholder="Subject"]').value;
+  const message = document.querySelector('textarea').value;
+
+  // Send email using EmailJS
+  emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+    from_name: name,
+    from_email: email,
+    subject: subject,
+    message: message
+  })
+  .then(function(response) {
+    alert("Message sent successfully!"); // Show success message
+    document.querySelector('form').reset(); // Reset the form
+  }, function(error) {
+    alert("Failed to send message. Please try again."); // Show error message
+  });
+});
