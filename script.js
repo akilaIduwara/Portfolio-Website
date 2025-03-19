@@ -265,7 +265,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
   const message = document.querySelector('textarea').value;
 
   // Send email using EmailJS
-  emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+  emailjs.send("service_f2bhz0a", "Portfilo", {
     from_name: name,
     from_email: email,
     subject: subject,
