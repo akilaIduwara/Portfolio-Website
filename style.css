@@ -289,7 +289,7 @@ nav .nav-links li a.active::after {
   width: 350px;
   height: 350px;
   top: 65%;
-  left: 55%;
+  left: 50%; /* Changed from 55% to 50% to center it properly */
   transform: translate(-50%, -50%);
   border-radius: 50%;
   overflow: hidden;
@@ -297,7 +297,6 @@ nav .nav-links li a.active::after {
   box-shadow: 0 0 30px rgba(255, 62, 108, 0.6);
   animation: glow 5s ease-in-out infinite;
 }
-
 .profile-frame::before {
   content: '';
   position: absolute;
