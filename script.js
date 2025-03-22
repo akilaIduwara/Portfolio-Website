@@ -264,6 +264,8 @@ document.querySelector('form').addEventListener('submit', function(event) {
   const subject = document.querySelector('input[type="text"][placeholder="Subject"]').value;
   const message = document.querySelector('textarea').value;
 
+  
+
   // Send email using EmailJS
   emailjs.send("service_f2bhz0a", "Portfilo", {
     from_name: name,
@@ -277,4 +279,6 @@ document.querySelector('form').addEventListener('submit', function(event) {
   }, function(error) {
     alert("Failed to send message. Please try again."); // Show error message
   });
+
+  
 });
