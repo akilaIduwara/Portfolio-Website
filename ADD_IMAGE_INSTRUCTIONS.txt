@@ -1,0 +1,34 @@
+====================================
+HOW TO ADD YOUR PROFILE PHOTO
+====================================
+
+STEP 1: Save your image file
+   - Name it: profile.jpg
+   - Format: .jpg, .jpeg, or .png is fine
+
+STEP 2: Copy to this EXACT location:
+   D:\GitHub\Self\MyPortfolio\Portfolio-Website\public\profile.jpg
+
+STEP 3: Restart your server
+   - Press Ctrl+C to stop
+   - Type: npm start
+   - Press Enter
+
+STEP 4: Refresh browser
+   - Press Ctrl+Shift+R (hard refresh)
+
+====================================
+IMPORTANT:
+- File must be named: profile.jpg
+- File must be in: public folder (NOT src folder)
+- After adding file, RESTART the server
+
+The code will automatically try these names if profile.jpg doesn't exist:
+- profile.png
+- akila.jpg  
+- Akila2.jpg
+- akila-profile.jpg
+- photo.jpg
+
+====================================
+
