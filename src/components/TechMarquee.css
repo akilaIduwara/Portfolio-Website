@@ -1,0 +1,83 @@
+/* =============================================
+   TECH MARQUEE - Cloud99x Style
+   ============================================= */
+.marquee-section {
+  background: #ffffff;
+  padding: 1.65rem 0;
+  overflow: hidden;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  margin-top: -2.75rem; /* Pulls the section slightly upwards to fit tightly against the taller wave curves */
+  position: relative;
+  z-index: 20;
+}
+
+.marquee-track-wrapper {
+  max-width: 95vw;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Fade edges */
+.marquee-track-wrapper::before,
+.marquee-track-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+}
+
+.marquee-track-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #ffffff, transparent);
+}
+
+.marquee-track-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #ffffff, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 45s linear infinite; /* Slowed down for smooth readability */
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 0.5rem 3rem 0.5rem 3.5rem;
+  font-weight: 800;
+  font-family: 'Roboto', sans-serif;
+  color: #1f2937;
+  white-space: nowrap;
+}
+
+.marquee-icon {
+  font-size: 4.25rem;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.marquee-item:hover .marquee-icon {
+  transform: scale(1.15);
+}
+
+.marquee-name {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #1f2937;
+  letter-spacing: -0.02em;
+}
+

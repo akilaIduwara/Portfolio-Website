@@ -1,159 +1,101 @@
-/* CSS Variables for Dark Theme (Default) */
-:root[data-theme="dark"] {
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #121212;
-  --section-bg: #0f0f0f;
-  --card-bg: rgba(28, 28, 30, 0.8);
-  --nav-bg: rgba(10, 10, 10, 0.9);
-  --text-primary: #ffffff;
-  --text-secondary: #b0b0b0;
-  --primary-color: #6a11cb;
-  --secondary-color: #2575fc;
-  --accent-color: #ff3e6c;
-  --border-color: rgba(106, 17, 203, 0.2);
-  --gradient-primary: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  --gradient-secondary: linear-gradient(135deg, #ff3e6c 0%, #ff8d3e 100%);
-  --gradient-bg: linear-gradient(135deg, rgba(106, 17, 203, 0.1), rgba(37, 117, 252, 0.1));
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 10px 30px rgba(106, 17, 203, 0.3);
-  --shadow-lg: 0 20px 60px rgba(106, 17, 203, 0.4);
-  --shadow-xl: 0 30px 80px rgba(106, 17, 203, 0.5);
-}
-
-/* CSS Variables for Light Theme */
-:root[data-theme="light"] {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f5f5f5;
-  --section-bg: #fafafa;
-  --card-bg: rgba(255, 255, 255, 0.9);
-  --nav-bg: rgba(255, 255, 255, 0.95);
-  --text-primary: #1a1a1a;
-  --text-secondary: #666666;
-  --primary-color: #6a11cb;
-  --secondary-color: #2575fc;
-  --accent-color: #ff3e6c;
-  --border-color: rgba(106, 17, 203, 0.15);
-  --gradient-primary: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  --gradient-secondary: linear-gradient(135deg, #ff3e6c 0%, #ff8d3e 100%);
-  --gradient-bg: linear-gradient(135deg, rgba(106, 17, 203, 0.05), rgba(37, 117, 252, 0.05));
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 10px 30px rgba(106, 17, 203, 0.2);
-  --shadow-lg: 0 20px 60px rgba(106, 17, 203, 0.3);
-  --shadow-xl: 0 30px 80px rgba(106, 17, 203, 0.4);
-}
-
-* {
+/* =============================================
+   GLOBAL RESET & BASE - Cloud99x Exact Style
+   ============================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+:root {
+  /* Cloud99x exact color palette */
+  --blue-100: #060b25;       /* Darkest navy - hero gradient start */
+  --blue-200: #0f1460;       /* Medium navy - labels, hover states */
+  --blue-300: #1d4ed8;       /* Bright blue - accent, footer, CTA */
+  --blue-400: #3b82f6;       /* Lighter blue */
+  --blue-hover: #11115e;     /* Mobile FAB hover */
+
+  /* Section backgrounds */
+  --white: #ffffff;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+
+  /* Typography */
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+
+  /* Theme variables for compatibility */
+  --bg-primary: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --gradient-primary: linear-gradient(135deg, var(--blue-200) 0%, var(--blue-300) 100%);
+  --border-glow: var(--blue-300);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --accent-color: var(--blue-300);
+  --border-color: rgba(0, 0, 0, 0.08);
+  --glow-primary: 0 0 12px rgba(29, 78, 216, 0.35);
+  --text-primary: #1f2937;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-roboto);
+  background-color: var(--white);
+  color: var(--gray-900);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  line-height: 1.6;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+img {
+  max-width: 100%;
+  display: block;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* =============================================
+   CONTAINER
+   ============================================= */
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 2.5rem;
 }
 
-/* Gradient Text Utility */
-.gradient-text {
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Section Title */
-.section-title {
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 800;
-  margin-bottom: 3rem;
-  color: var(--text-primary);
-  text-align: center;
-  position: relative;
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: var(--gradient-primary);
-  border-radius: 2px;
-}
-
-/* Scrollbar Styling */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-secondary);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--gradient-primary);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-color);
-}
-
-/* Focus Styles */
-*:focus-visible {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
-}
-
-/* Loading Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.5s ease-in;
-}
-
-/* Responsive Typography */
 @media (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-  
   .container {
-    padding: 0 1rem;
+    padding: 0 1.25rem;
   }
 }
 
+/* =============================================
+   SECTION BASE
+   ============================================= */
+section {
+  width: 100%;
+}

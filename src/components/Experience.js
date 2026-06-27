@@ -1,117 +1,97 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import './Experience.css';
 
 const Experience = () => {
-  const experiences = [
-    {
-      company: "Civil Aviation Authority of Sri Lanka",
-      position: "Software Engineer Intern",
-      location: "Katunayake, Sri Lanka",
-      period: "Sep 2025 – Present",
-      responsibilities: [
-        "Developed enterprise web applications using React.js, JavaScript, and MySQL for aviation audit and compliance workflows supporting national regulatory operations",
-        "Designed relational database schemas and optimized SQL queries achieving 40% improvement in data retrieval performance for compliance reporting systems",
-        "Implemented comprehensive data validation and integrity checks ensuring reliable audit logs and regulatory data consistency across production systems",
-        "Provided enterprise IT support including system monitoring, application troubleshooting, and issue resolution to minimize downtime"
-      ],
-      technologies: ["React.js", "JavaScript", "MySQL", "Database Optimization", "Enterprise Systems"]
-    }
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { x: -50, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6
-      }
-    }
-  };
-
   return (
-    <section id="experience" className="experience">
-      <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
+    <section id="experience" className="exp-section">
+      <div className="exp-container">
+
+        {/* Header */}
+        <motion.div 
+          className="exp-header"
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">
-            Professional <span className="gradient-text">Experience</span>
-          </h2>
+          <h2 className="exp-label">Work History</h2>
+          <h1 className="exp-heading">Professional Experience</h1>
         </motion.div>
 
-        <motion.div
-          className="experience-timeline"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+        {/* Experience card */}
+        <motion.div 
+          className="exp-card"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
         >
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              className="experience-item"
-              variants={itemVariants}
-            >
-              <div className="experience-card">
-                <div className="experience-header">
-                  <div className="experience-icon">
-                    <FaBriefcase />
-                  </div>
-                  <div className="experience-title">
-                    <h3>{exp.position}</h3>
-                    <h4>{exp.company}</h4>
-                    <div className="experience-meta">
-                      <span className="experience-period">
-                        <FaCalendarAlt /> {exp.period}
-                      </span>
-                      <span className="experience-location">
-                        <FaMapMarkerAlt /> {exp.location}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="experience-responsibilities">
-                  <h5>Key Responsibilities & Achievements:</h5>
-                  <ul>
-                    {exp.responsibilities.map((responsibility, idx) => (
-                      <li key={idx}>{responsibility}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="experience-technologies">
-                  <h5>Technologies:</h5>
-                  <div className="tech-tags">
-                    {exp.technologies.map((tech, idx) => (
-                      <span key={idx} className="tech-tag">{tech}</span>
-                    ))}
-                  </div>
-                </div>
+          <div className="exp-card-top">
+            <div className="exp-role-block">
+              <h3 className="exp-role">Software Engineer Intern</h3>
+              <h4 className="exp-company">Civil Aviation Authority of Sri Lanka</h4>
+              <div className="exp-meta">
+                <span>📅 Sep 2025 – Present</span>
+                <span>📍 Katunayake, Sri Lanka</span>
               </div>
-            </motion.div>
-          ))}
+            </div>
+            <div className="exp-badge">Internship</div>
+          </div>
+
+          <div className="exp-responsibilities">
+            <h5>Key Responsibilities &amp; Achievements</h5>
+            <ul>
+              <li>Developed enterprise web applications using React.js, JavaScript and MySQL for aviation audit and compliance workflows supporting national regulatory operations</li>
+              <li>Designed relational database schemas and optimized SQL queries achieving <strong>40% improvement</strong> in data retrieval performance for compliance reporting systems</li>
+              <li>Implemented comprehensive data validation and integrity checks ensuring reliable audit logs and regulatory data consistency across production systems</li>
+              <li>Provided enterprise IT support including system monitoring, application troubleshooting, and issue resolution to minimize downtime</li>
+            </ul>
+          </div>
+
+          <div className="exp-techs">
+            <h5>Technologies Used</h5>
+            <div className="exp-tech-tags">
+              {['React.js', 'JavaScript', 'MySQL', 'Database Optimization', 'Enterprise Systems', 'SQL'].map((t, i) => (
+                <span key={i} className="exp-tech-tag">{t}</span>
+              ))}
+            </div>
+          </div>
         </motion.div>
+
+        {/* Education card */}
+        <motion.div 
+          className="exp-card edu-card"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className="exp-card-top">
+            <div className="exp-role-block">
+              <h3 className="exp-role">BSc (Hons) in Computer Science</h3>
+              <h4 className="exp-company">University of Westminster</h4>
+              <div className="exp-meta">
+                <span>📅 Sep 2023 – Sep 2027</span>
+                <span>📍 Colombo, Sri Lanka</span>
+              </div>
+            </div>
+            <div className="exp-badge edu-badge">Education</div>
+          </div>
+
+          <div className="exp-responsibilities">
+            <h5>Key Coursework</h5>
+            <div className="exp-tech-tags">
+              {['Algorithms & Data Structures', 'OOP', 'Machine Learning', 'Software Development', 'Database Management', 'Web Development'].map((t, i) => (
+                <span key={i} className="exp-tech-tag">{t}</span>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );
 };
 
 export default Experience;
-

@@ -1,192 +1,195 @@
-.experience {
-  padding: 6rem 2rem;
-  background: var(--section-bg);
-  position: relative;
+/* =============================================
+   EXPERIENCE - Cloud99x Clean Card Style
+   ============================================= */
+.exp-section {
+  background: #ffffff;
+  padding: 5rem 2.5rem;
 }
 
-.experience .container {
-  max-width: 1200px;
+.exp-container {
+  max-width: 1000px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.experience-timeline {
-  position: relative;
-  padding: 2rem 0;
+.exp-header {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.experience-item {
-  position: relative;
-  margin-bottom: 3rem;
+.exp-label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--blue-200, #0f1460);
+  margin-bottom: 0.5rem;
 }
 
-.experience-card {
-  background: var(--card-bg);
+.exp-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--blue-300, #1d4ed8);
+}
+
+/* ── CARD ── */
+.exp-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1.5rem;
   padding: 2.5rem;
-  border-radius: 20px;
-  border: 1px solid var(--border-color);
-  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  transition: box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
-.experience-card::before {
+.exp-card::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width: 4px;
-  height: 100%;
-  background: var(--gradient-primary);
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, var(--blue-200, #0f1460), var(--blue-300, #1d4ed8));
 }
 
-.experience-card:hover {
-  border-color: var(--primary-color);
-  box-shadow: var(--shadow-lg);
-  transform: translateX(10px);
+.exp-card:hover {
+  box-shadow: 0 8px 32px rgba(29,78,216,0.1);
 }
 
-.experience-header {
+.exp-card-top {
   display: flex;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
   align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-.experience-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 15px;
-  background: var(--gradient-primary);
+.exp-role-block {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  color: white;
-  flex-shrink: 0;
-  box-shadow: var(--shadow-md);
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
-.experience-title h3 {
-  font-size: 1.5rem;
+.exp-role {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
   font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
+  color: #111827;
 }
 
-.experience-title h4 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
-.experience-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-}
-
-.experience-period,
-.experience-location {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.experience-responsibilities {
-  margin-bottom: 1.5rem;
-}
-
-.experience-responsibilities h5 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 1rem;
-}
-
-.experience-responsibilities ul {
-  list-style: none;
-  padding: 0;
-}
-
-.experience-responsibilities li {
-  padding: 0.75rem 0;
-  padding-left: 1.5rem;
-  position: relative;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-.experience-responsibilities li::before {
-  content: '▹';
-  position: absolute;
-  left: 0;
-  color: var(--primary-color);
-  font-size: 1.2rem;
-}
-
-.experience-technologies {
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border-color);
-}
-
-.experience-technologies h5 {
+.exp-company {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--blue-300, #1d4ed8);
+}
+
+.exp-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.exp-meta span {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.exp-badge {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--blue-300, #1d4ed8);
+  background: rgba(29,78,216,0.08);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+}
+
+.edu-badge {
+  color: #16a34a;
+  background: rgba(22,163,74,0.08);
+}
+
+.exp-responsibilities h5 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #9ca3af;
   margin-bottom: 1rem;
 }
 
-.tech-tags {
+.exp-responsibilities ul {
+  list-style: none;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 0.75rem;
 }
 
-.tech-tag {
-  background: var(--bg-secondary);
-  color: var(--text-primary);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  border: 1px solid var(--border-color);
-  transition: all 0.3s ease;
+.exp-responsibilities ul li {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.7;
+  padding-left: 1.25rem;
+  position: relative;
 }
 
-.tech-tag:hover {
-  background: var(--gradient-primary);
-  color: white;
-  border-color: transparent;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
+.exp-responsibilities ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--blue-200, #0f1460);
+  font-weight: 700;
+}
+
+.exp-techs h5 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #9ca3af;
+  margin-bottom: 0.75rem;
+}
+
+.exp-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.exp-tech-tag {
+  font-size: 0.8rem;
+  color: var(--blue-300, #1d4ed8);
+  background: rgba(29,78,216,0.07);
+  padding: 0.3rem 0.85rem;
+  border-radius: 9999px;
+  font-weight: 500;
+}
+
+.edu-card .exp-tech-tag {
+  color: #16a34a;
+  background: rgba(22,163,74,0.07);
 }
 
 @media (max-width: 768px) {
-  .experience {
-    padding: 4rem 1rem;
+  .exp-section {
+    padding: 3rem 1.25rem;
   }
 
-  .experience-card {
-    padding: 1.5rem;
+  .exp-card {
+    padding: 1.75rem;
   }
 
-  .experience-header {
+  .exp-card-top {
     flex-direction: column;
-    gap: 1rem;
-  }
-
-  .experience-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
-  }
-
-  .experience-meta {
-    flex-direction: column;
-    gap: 0.75rem;
   }
 }
-

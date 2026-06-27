@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
   SiPython, SiJavascript, SiTypescript, SiCplusplus,
   SiReact, SiNodedotjs, SiExpress, SiSpring, SiMongodb, SiMysql,
   SiDocker, SiAmazonaws, SiGit, SiPostman, SiTensorflow, SiAndroid
@@ -61,35 +61,35 @@ const Skills = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.05
-      }
+      transition: { staggerChildren: 0.07 }
     }
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 25, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.5
-      }
+      transition: { duration: 0.5, ease: [0.4, 0, 0.2, 1] }
     }
   };
 
   return (
     <section id="skills" className="skills">
       <div className="container">
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          className="skills-header"
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
+          <span className="section-tag">What I Know</span>
           <h2 className="section-title">
             Technical <span className="gradient-text">Skills</span>
           </h2>
+          <div className="section-underline" />
         </motion.div>
 
         <motion.div
@@ -111,12 +111,10 @@ const Skills = () => {
                   <motion.div
                     key={skillIndex}
                     className="skill-card"
-                    whileHover={{ y: -5, scale: 1.05 }}
-                    transition={{ duration: 0.2 }}
+                    whileHover={{ x: 4 }}
+                    transition={{ duration: 0.15 }}
                   >
-                    <div className="skill-icon">
-                      {skill.icon}
-                    </div>
+                    <div className="skill-icon">{skill.icon}</div>
                     <div className="skill-info">
                       <h4 className="skill-name">{skill.name}</h4>
                       <div className="skill-bar-container">
@@ -125,11 +123,11 @@ const Skills = () => {
                           initial={{ width: 0 }}
                           whileInView={{ width: `${skill.level}%` }}
                           viewport={{ once: true }}
-                          transition={{ duration: 1, delay: skillIndex * 0.1 }}
+                          transition={{ duration: 1.2, delay: skillIndex * 0.08, ease: [0.4, 0, 0.2, 1] }}
                         />
                       </div>
-                      <span className="skill-level">{skill.level}%</span>
                     </div>
+                    <span className="skill-level">{skill.level}%</span>
                   </motion.div>
                 ))}
               </div>
@@ -137,24 +135,26 @@ const Skills = () => {
           ))}
         </motion.div>
 
+        {/* Core CS Concepts */}
         <motion.div
           className="core-skills"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
         >
           <h3 className="core-skills-title">Core CS Concepts</h3>
           <div className="core-skills-tags">
             {[
-              "OOP", "Data Structures", "Algorithms", "DBMS", 
-              "SDLC", "Agile Methodologies", "REST APIs", "Query Optimization"
+              "OOP", "Data Structures", "Algorithms", "DBMS",
+              "SDLC", "Agile Methodologies", "REST APIs", "Query Optimization",
+              "Design Patterns", "System Design"
             ].map((skill, index) => (
               <motion.span
                 key={index}
                 className="core-skill-tag"
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.2 }}
+                whileHover={{ scale: 1.08, y: -2 }}
+                transition={{ duration: 0.15 }}
               >
                 {skill}
               </motion.span>
@@ -167,4 +167,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
